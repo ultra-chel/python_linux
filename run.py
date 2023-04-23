@@ -21,7 +21,6 @@ def get_report():
     for p in procs[1:]:
         if not p == '':
             chunks = p.split(maxsplit=len(titles) - 1)
-            # print(chunks)
             user_list.append(chunks[titles.index('USER')])
             proc_cpu = float(chunks[titles.index('%CPU')])
             used_cpu.append(proc_cpu)
@@ -68,14 +67,8 @@ def get_report():
         print(f'\nВсего CPU используется: {float("{0:.1f}".format(sum(used_cpu)))} %')
         print(f'\nБольше всего CPU использует: {max_cpu_proc[0: 20]} ({max_cpu} %)')
         print(f'\nБольше всего памяти использует: {max_mem_proc[0: 20]} ({max_mem} %) \n')
-
     sys.stdout = out
 
 
 if __name__ == '__main__':
     get_report()
-    # capture_err_and_out()
-    # capture_err_and_out_2()
-    # exit_code_non_zero()
-    # timeout()
-    # shell()
