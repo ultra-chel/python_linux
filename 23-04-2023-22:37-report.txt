@@ -1,0 +1,25 @@
+Отчет о состоянии системы:
+
+Пользователи системы:  kernoops, systemd+, syslog, message+, colord, ubpk, root, rtkit, avahi, 
+
+Процессов запущено: 250
+
+Пользовательских процессов:
+root : 123
+ubpk : 114
+systemd+ : 3
+avahi : 2
+kernoops : 2
+message+ : 1
+syslog : 1
+rtkit : 1
+colord : 1
+
+Всего памяти используется: 85.4 %
+
+Всего CPU используется: 38.1 %
+
+Больше всего CPU использует: /usr/bin/gnome-shell (16.2 %)
+
+Больше всего памяти использует: /snap/pycharm-commun (26.0 %) 
+
