@@ -41,7 +41,7 @@ def get_report():
     print(f'\nПользователи системы: ', end=' ')
     for x in unique_users:
         print(x + ',', end=' ')
-    print(f'\n\nПроцессов запущено: {len(procs)}')
+    print(f'\n\nПроцессов запущено: {len(procs) - 2}')
     print(f'\nПользовательских процессов:')
     for key, value in sorted_result.items():
         print(key, ":", value)
@@ -59,7 +59,7 @@ def get_report():
         print(f'\nПользователи системы: ', end=' ')
         for x in unique_users:
             print(x + ',', end=' ')
-        print(f'\n\nПроцессов запущено: {len(procs)}')
+        print(f'\n\nПроцессов запущено: {len(procs) - 2}')
         print(f'\nПользовательских процессов:')
         for key, value in sorted_result.items():
             print(key, ":", value)
