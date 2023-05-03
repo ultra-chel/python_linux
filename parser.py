@@ -5,6 +5,7 @@ import os
 from collections import defaultdict
 from os import listdir
 from os.path import join, isfile
+from operator import itemgetter
 
 
 def main(file):
@@ -36,8 +37,19 @@ def main(file):
     # for ip in unique_ips:
     result = {i: ips.count(i) for i in ips}
     print(result)
+    sorted_result = dict(sorted(result.items(), key=itemgetter(1), reverse=True))
+    print(sorted_result)
+    for key, values in sorted_result.items():
+        i = 0
+        while i < 3:
+            top_ips = {key: values}
+            i += 1
+    #print(top_ips)
+    #dict.items(1)
 
-    # print(json.dumps(dict_ip, indent=4))
+    print(sorted_result.items())
+    print(next(iter(sorted_result)))
+    print(json.dumps(dict_ip, indent=4))
 
 
 if __name__ == '__main__':
